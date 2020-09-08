@@ -21,6 +21,9 @@
     <ClInclude Include="GameInterface.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="TestGlm.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -30,6 +33,9 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="GameInterface.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="TestGlm.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
