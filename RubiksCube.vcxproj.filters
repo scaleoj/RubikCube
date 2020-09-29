@@ -24,6 +24,9 @@
     <ClInclude Include="TestGlm.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="ShaderUtil.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -38,5 +41,12 @@
     <ClCompile Include="TestGlm.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="ShaderUtil.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="Shader\FSimple.glsl" />
+    <CopyFileToFolders Include="Shader\VSimple.glsl" />
   </ItemGroup>
 </Project>

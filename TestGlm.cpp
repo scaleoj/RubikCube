@@ -1,6 +1,9 @@
 #include "TestGlm.h"
+
 #include <glm/glm.hpp>
 #include <glm/ext.hpp>
+#include <GL/glew.h>
+#include "ShaderUtil.h"
 
 void TestGlm::Initialize()
 {
@@ -34,7 +37,11 @@ void TestGlm::Initialize()
 
 	//-------------Quaternion-------------------//
 
+	GLuint test = ShaderUtil::CreateShaderProgram("VSimple.glsl", "FSimple.glsl");
 	m_orientationQuaternion = glm::quat(1.0f, 0.0f, 0.0f, 0.0f);
+
+
+
 
 
 }
