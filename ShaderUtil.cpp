@@ -4,6 +4,7 @@
 
 GLuint ShaderUtil::CreateShaderProgram(const char * vertexFilename, const char * fragmentFilename)
 {
+
 	std::string vertexProgram = LoadFile(vertexFilename);
 	const char* vertexString = vertexProgram.c_str();
 	GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
@@ -13,12 +14,12 @@ GLuint ShaderUtil::CreateShaderProgram(const char * vertexFilename, const char *
 	PrintOGlErrors();
 	int vertCompiled;
 	glGetShaderiv(vertexShader, GL_COMPILE_STATUS, &vertCompiled);
+
 	if (vertCompiled != 1)
 	{
 		std::cout << "Vertex shader error " << std::endl;
 		PrintShaderLog(vertexShader);
 	}
-
 	std::string fragmentProgram = LoadFile(fragmentFilename);
 	const char* fragmentString = fragmentProgram.c_str();
 	GLuint fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
@@ -45,7 +46,7 @@ GLuint ShaderUtil::CreateShaderProgram(const char * vertexFilename, const char *
 	if (linked != 1)
 	{
 		std::cout << "Linking failed: " << std::endl;
-		PrintprogramLog(shaderProgram);
+		PrintProgramLog(shaderProgram);
 	}
 	glDeleteShader(vertexShader);
 	glDeleteShader(fragmentShader);
@@ -53,12 +54,13 @@ GLuint ShaderUtil::CreateShaderProgram(const char * vertexFilename, const char *
 	return shaderProgram;
 }
 
-std::string ShaderUtil::LoadFile(const char * fileName)
+std::string ShaderUtil::LoadFile(const char* fileName)
 {
 	std::string result;
 	std::ifstream fileStream(fileName, std::ios::in);
 	while (!fileStream.eof())
 	{
+		
 		std::string line;
 		std::getline(fileStream, line);
 		result.append(line + "\n");
@@ -84,7 +86,7 @@ void ShaderUtil::PrintShaderLog(GLuint shader)
 	free(log);
 }
 
-void ShaderUtil::PrintprogramLog(GLuint program)
+void ShaderUtil::PrintProgramLog(GLuint program)
 {
 	int memLength;
 	int messageLength;

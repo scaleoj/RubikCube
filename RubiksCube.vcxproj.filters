@@ -27,6 +27,9 @@
     <ClInclude Include="ShaderUtil.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="TestTriangle.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -42,6 +45,9 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="ShaderUtil.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="TestTriangle.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

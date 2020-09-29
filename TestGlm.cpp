@@ -9,6 +9,7 @@ void TestGlm::Initialize()
 {
 	//Every one of the following statements are independent
 	//--------------------------------------------//
+	/*
 
 	glm::mat4 testMat = glm::mat4(1.0f);
 	testMat = glm::translate(testMat, glm::vec3(1.0f, -1.0f, 1.0f));
@@ -36,7 +37,7 @@ void TestGlm::Initialize()
 	innerProduct = innerProduct;
 
 	//-------------Quaternion-------------------//
-
+		*/
 	GLuint test = ShaderUtil::CreateShaderProgram("VSimple.glsl", "FSimple.glsl");
 	m_orientationQuaternion = glm::quat(1.0f, 0.0f, 0.0f, 0.0f);
 
@@ -51,6 +52,7 @@ int passed = 0;
 void TestGlm::Update(double deltaTime) 
 {
 	//hack!!!
+
 	if (passed == 0)
 	{
 		passed = 1;

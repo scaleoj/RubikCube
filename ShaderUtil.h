@@ -10,6 +10,6 @@ public:
 private:
 	static std::string LoadFile(const char* fileName);
 	static void PrintShaderLog(GLuint shader);
-	static void PrintprogramLog(GLuint program);
+	static void PrintProgramLog(GLuint program);
 	static void PrintOGlErrors();
 };
