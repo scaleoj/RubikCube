@@ -165,6 +165,7 @@
     <ClInclude Include="GameInterface.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="ShaderUtil.h" />
+    <ClInclude Include="TestCompoundCube.h" />
     <ClInclude Include="TestCubie.h" />
     <ClInclude Include="TestGlm.h" />
     <ClInclude Include="TestTriangle.h" />
@@ -180,6 +181,7 @@
     </ClCompile>
     <ClCompile Include="RubiksCube.cpp" />
     <ClCompile Include="ShaderUtil.cpp" />
+    <ClCompile Include="TestCompoundCube.cpp" />
     <ClCompile Include="TestCubie.cpp" />
     <ClCompile Include="TestGlm.cpp" />
     <ClCompile Include="TestTriangle.cpp" />

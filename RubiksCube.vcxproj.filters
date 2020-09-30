@@ -36,6 +36,9 @@
     <ClInclude Include="TestCubie.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="TestCompoundCube.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -60,6 +63,9 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="TestCubie.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="TestCompoundCube.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

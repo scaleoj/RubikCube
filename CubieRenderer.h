@@ -10,7 +10,7 @@ public:
 	void Render(const glm::mat4& transformationMatrix);
 	void ClearResources();
 
-	
+	float GetCubieExtension() const { return 2.0f * m_offset; }
 
 private:
 	const float m_offset = 0.5f;
