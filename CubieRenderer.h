@@ -10,6 +10,8 @@ public:
 	void Render(const glm::mat4& transformationMatrix);
 	void ClearResources();
 
+	
+
 private:
 	const float m_offset = 0.5f;
 

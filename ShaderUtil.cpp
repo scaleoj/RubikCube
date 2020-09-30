@@ -58,6 +58,7 @@ std::string ShaderUtil::LoadFile(const char* fileName)
 {
 	std::string result;
 	std::ifstream fileStream(fileName, std::ios::in);
+	
 	while (!fileStream.eof())
 	{
 		

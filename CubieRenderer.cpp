@@ -53,7 +53,7 @@ void CubieRenderer::Render(const glm::mat4 & transformationMatrix)
 	glBindVertexArray(m_arrayBufferObject);
 
 	glUniformMatrix4fv(m_transformLocation, 1, GL_FALSE, value_ptr(transformationMatrix));
-	glDrawArrays(GL_TRIANGLES, 0, 6 * 6);
+	glDrawArrays(GL_TRIANGLES, 0, 3 * 6 * 6);
 
 	glBindVertexArray(0);
 	glUseProgram(0);
@@ -82,7 +82,7 @@ void CubieRenderer::AddSidePosition(int sideType, int direction, std::vector<glm
 		{
 			glm::vec3 localPoint(direction * m_offset);
 			localPoint[localXDim] = (2 * i - 1)* m_offset;
-			localPoint[localYDim] = (2 * i - 1)* m_offset;
+			localPoint[localYDim] = (2 * j - 1)* m_offset;
 			cornerPoints[i][j] = localPoint;
 		}
 	}
