@@ -39,6 +39,15 @@
     <ClInclude Include="TestCompoundCube.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="KeyboardObserver.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="InputSystem.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="TestKey.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -66,6 +75,15 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="TestCompoundCube.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyboardObserver.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="InputSystem.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="TestKey.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

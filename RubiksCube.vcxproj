@@ -163,16 +163,21 @@
   <ItemGroup>
     <ClInclude Include="CubieRenderer.h" />
     <ClInclude Include="GameInterface.h" />
+    <ClInclude Include="InputSystem.h" />
+    <ClInclude Include="KeyboardObserver.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="ShaderUtil.h" />
     <ClInclude Include="TestCompoundCube.h" />
     <ClInclude Include="TestCubie.h" />
     <ClInclude Include="TestGlm.h" />
+    <ClInclude Include="TestKey.h" />
     <ClInclude Include="TestTriangle.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CubieRenderer.cpp" />
     <ClCompile Include="GameInterface.cpp" />
+    <ClCompile Include="InputSystem.cpp" />
+    <ClCompile Include="KeyboardObserver.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -184,6 +189,7 @@
     <ClCompile Include="TestCompoundCube.cpp" />
     <ClCompile Include="TestCubie.cpp" />
     <ClCompile Include="TestGlm.cpp" />
+    <ClCompile Include="TestKey.cpp" />
     <ClCompile Include="TestTriangle.cpp" />
   </ItemGroup>
   <ItemGroup>
