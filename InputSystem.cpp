@@ -24,7 +24,7 @@ bool InputSystem::isRightMouseButtonDown()
 	return (glfwGetMouseButton(m_window, GLFW_MOUSE_BUTTON_RIGHT) == GLFW_PRESS);
 }
 
-void InputSystem::GetPickingRay(const glm::mat4 & transformationMatrix, glm::vec3 & startingPoint, glm::vec3 & direction)
+void InputSystem::GetPickingRay(const glm::mat4 & transformationMatrix, glm::vec3& startingPoint, glm::vec3& direction)
 {
 	double xpos, ypos;
 	glfwGetCursorPos(m_window, &xpos, &ypos);
@@ -39,7 +39,7 @@ void InputSystem::GetPickingRay(const glm::mat4 & transformationMatrix, glm::vec
 	glm::vec4 farPoint = nearPoint;
 	farPoint.z = 0.99f;
 
-	glm::mat4 inverse = glm::inverse = glm::inverse(tranformationMatrix);
+	glm::mat4 inverse = glm::inverse(transformationMatrix);
 	nearPoint = inverse * nearPoint;
 	farPoint = inverse * farPoint;
 
@@ -53,7 +53,7 @@ void InputSystem::GetPickingRay(const glm::mat4 & transformationMatrix, glm::vec
 
 }
 
-void InputSystem::GetMousePosition(double & xpos, double & ypos)
+void InputSystem::GetMousePosition(double& xpos, double& ypos)
 {
 
 	glfwGetCursorPos(m_window, &xpos, &ypos);
