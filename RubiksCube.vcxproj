@@ -161,6 +161,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CompoundCube.h" />
     <ClInclude Include="CubieRenderer.h" />
     <ClInclude Include="GameInterface.h" />
     <ClInclude Include="InputSystem.h" />
@@ -175,6 +176,7 @@
     <ClInclude Include="TestTriangle.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CompoundCube.cpp" />
     <ClCompile Include="CubieRenderer.cpp" />
     <ClCompile Include="GameInterface.cpp" />
     <ClCompile Include="InputSystem.cpp" />
