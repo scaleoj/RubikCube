@@ -6,6 +6,8 @@
 void CompoundCube::Initialize(GLFWwindow* window)
 {
 	m_input.SetWindow(window);
+
+	m_viewProject = glm::mat4(1.0f);
 	m_input.ObserveKey(GLFW_KEY_SPACE);
 	m_input.ObserveKey(GLFW_KEY_RIGHT);
 	m_input.ObserveKey(GLFW_KEY_LEFT);
@@ -21,6 +23,9 @@ void CompoundCube::Render(float aspectRatio)
 	glm::mat4 globalTransformation = glm::perspective(glm::radians(45.0f), aspectRatio, 0.1f, 100.0f) *
 		glm::lookAt(glm::vec3(0.0f, 0.0f, -9.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f)) *
 		glm::mat4_cast(m_orientationQuaternion);
+
+	m_viewProject = glm::perspective(glm::radians(45.0f), aspectRatio, 0.1f, 100.0f)*
+		glm::lookAt(glm::vec3(0.0f, 0.0f, -9.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 
 	float offset = m_cubieRenderer.GetCubieExtension() + 0.1f;
 	for (int i = 0; i < 3; ++i)
@@ -74,9 +79,20 @@ void CompoundCube::Update(double deltaTime)
 		yVel = glm::radians(-90.0f);
 	}
 
+	if (m_input.isLeftMouseButtonDown())
+	{
+		glm::vec3 position, direction;
+
+		m_input.GetPickingRay(m_viewProject, position, direction);
+	}
+
 
 	glm::quat velocityQuaternion = glm::quat(0.0f, glm::vec3(xVel, yVel, 0.0f));
 
 	m_orientationQuaternion += 0.5f * ((float)deltaTime) *velocityQuaternion * m_orientationQuaternion;
 	m_orientationQuaternion = normalize(m_orientationQuaternion);
+
+
+
+	
 }

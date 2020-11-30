@@ -16,5 +16,6 @@ private:
 	CubieRenderer m_cubieRenderer;
 	InputSystem m_input;
 	glm::quat m_orientationQuaternion;
+	glm::mat4 m_viewProject;
 };
 

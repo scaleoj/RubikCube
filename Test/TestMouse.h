@@ -1,8 +1,8 @@
 #pragma once
-#include "GameInterface.h"
+#include "../GameInterface.h"
 #include <glm/vec3.hpp>
-#include "InputSystem.h"
-#include "CubieRenderer.h"
+#include "../InputSystem.h"
+#include "../CubieRenderer.h"
 
 class TestMouse : public GameInterface
 {

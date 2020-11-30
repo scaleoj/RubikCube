@@ -21,22 +21,10 @@
     <ClInclude Include="GameInterface.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="TestGlm.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
     <ClInclude Include="ShaderUtil.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="TestTriangle.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
     <ClInclude Include="CubieRenderer.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="TestCubie.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="TestCompoundCube.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="KeyboardObserver.h">
@@ -45,13 +33,25 @@
     <ClInclude Include="InputSystem.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="TestKey.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="TestMouse.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
     <ClInclude Include="CompoundCube.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Test\TestTriangle.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Test\TestMouse.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Test\TestKey.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Test\TestGlm.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Test\TestCubie.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Test\TestCompoundCube.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>
@@ -65,22 +65,10 @@
     <ClCompile Include="GameInterface.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="TestGlm.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="ShaderUtil.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="TestTriangle.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="CubieRenderer.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="TestCubie.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="TestCompoundCube.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="KeyboardObserver.cpp">
@@ -89,20 +77,32 @@
     <ClCompile Include="InputSystem.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="TestKey.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="TestMouse.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="CompoundCube.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\TestTriangle.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\TestMouse.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\TestKey.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\TestGlm.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\TestCompoundCube.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\TestCubie.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CopyFileToFolders Include="FSimple.glsl" />
-    <CopyFileToFolders Include="VSimple.glsl" />
-    <CopyFileToFolders Include="FColor.glsl" />
-    <CopyFileToFolders Include="VColor.glsl" />
+    <CopyFileToFolders Include="Shader\FColor.glsl" />
+    <CopyFileToFolders Include="Shader\FSimple.glsl" />
+    <CopyFileToFolders Include="Shader\VColor.glsl" />
+    <CopyFileToFolders Include="Shader\VSimple.glsl" />
   </ItemGroup>
 </Project>

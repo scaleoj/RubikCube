@@ -168,12 +168,12 @@
     <ClInclude Include="KeyboardObserver.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="ShaderUtil.h" />
-    <ClInclude Include="TestCompoundCube.h" />
-    <ClInclude Include="TestCubie.h" />
-    <ClInclude Include="TestGlm.h" />
-    <ClInclude Include="TestKey.h" />
-    <ClInclude Include="TestMouse.h" />
-    <ClInclude Include="TestTriangle.h" />
+    <ClInclude Include="Test\TestCompoundCube.h" />
+    <ClInclude Include="Test\TestCubie.h" />
+    <ClInclude Include="Test\TestGlm.h" />
+    <ClInclude Include="Test\TestKey.h" />
+    <ClInclude Include="Test\TestMouse.h" />
+    <ClInclude Include="Test\TestTriangle.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CompoundCube.cpp" />
@@ -189,32 +189,32 @@
     </ClCompile>
     <ClCompile Include="RubiksCube.cpp" />
     <ClCompile Include="ShaderUtil.cpp" />
-    <ClCompile Include="TestCompoundCube.cpp" />
-    <ClCompile Include="TestCubie.cpp" />
-    <ClCompile Include="TestGlm.cpp" />
-    <ClCompile Include="TestKey.cpp" />
-    <ClCompile Include="TestMouse.cpp" />
-    <ClCompile Include="TestTriangle.cpp" />
+    <ClCompile Include="Test\TestCompoundCube.cpp" />
+    <ClCompile Include="Test\TestCubie.cpp" />
+    <ClCompile Include="Test\TestGlm.cpp" />
+    <ClCompile Include="Test\TestKey.cpp" />
+    <ClCompile Include="Test\TestMouse.cpp" />
+    <ClCompile Include="Test\TestTriangle.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <CopyFileToFolders Include="FSimple.glsl">
+    <CopyFileToFolders Include="Shader\FSimple.glsl">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
       <FileType>Document</FileType>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
     </CopyFileToFolders>
-    <CopyFileToFolders Include="VSimple.glsl">
+    <CopyFileToFolders Include="Shader\VSimple.glsl">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
       <FileType>Document</FileType>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
     </CopyFileToFolders>
   </ItemGroup>
   <ItemGroup>
-    <CopyFileToFolders Include="FColor.glsl">
+    <CopyFileToFolders Include="Shader\FColor.glsl">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
       <FileType>Document</FileType>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
     </CopyFileToFolders>
-    <CopyFileToFolders Include="VColor.glsl">
+    <CopyFileToFolders Include="Shader\VColor.glsl">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
       <FileType>Document</FileType>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>

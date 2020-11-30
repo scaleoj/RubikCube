@@ -1,7 +1,7 @@
 #pragma once
-#include "GameInterface.h"
-#include "CubieRenderer.h"
-#include "InputSystem.h"
+#include "../GameInterface.h"
+#include "../CubieRenderer.h"
+#include "../InputSystem.h"
 #include <glm/ext/quaternion_float.hpp>
 
 

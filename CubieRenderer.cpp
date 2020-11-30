@@ -21,7 +21,7 @@ void CubieRenderer::Initialize()
 	}
 	
 
-	m_shaderProgram = ShaderUtil::CreateShaderProgram("VColor.glsl", "FColor.glsl");
+	m_shaderProgram = ShaderUtil::CreateShaderProgram("Shader/VColor.glsl", "Shader/FColor.glsl");
 	m_transformLocation = glGetUniformLocation(m_shaderProgram, "transformation");
 
 	glGenVertexArrays(1, &m_arrayBufferObject);

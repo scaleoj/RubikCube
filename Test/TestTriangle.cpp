@@ -1,5 +1,5 @@
 #include "TestTriangle.h"
-#include "ShaderUtil.h"
+#include "../ShaderUtil.h"
 #include <glm/glm.hpp>
 #include <glm/ext.hpp>
 

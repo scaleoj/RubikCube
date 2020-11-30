@@ -1,7 +1,7 @@
 #pragma once
 
 
-#include "GameInterface.h"
+#include "../GameInterface.h"
 #include <glm/ext/quaternion_float.hpp>
 
 class TestGlm : public GameInterface

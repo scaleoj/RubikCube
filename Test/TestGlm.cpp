@@ -3,7 +3,7 @@
 #include <glm/glm.hpp>
 #include <glm/ext.hpp>
 #include <GL/glew.h>
-#include "ShaderUtil.h"
+#include "../ShaderUtil.h"
 
 void TestGlm::Initialize()
 {

@@ -1,5 +1,5 @@
 #pragma once
-#include "GameInterface.h"
+#include "../GameInterface.h"
 #include <GL/glew.h>
 
 class TestTriangle :
