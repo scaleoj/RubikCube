@@ -7,7 +7,6 @@ void CompoundCube::Initialize(GLFWwindow* window)
 {
 	m_input.SetWindow(window);
 
-	m_viewProject = glm::mat4(1.0f);
 	m_input.ObserveKey(GLFW_KEY_SPACE);
 	m_input.ObserveKey(GLFW_KEY_RIGHT);
 	m_input.ObserveKey(GLFW_KEY_LEFT);
@@ -24,8 +23,6 @@ void CompoundCube::Render(float aspectRatio)
 		glm::lookAt(glm::vec3(0.0f, 0.0f, -9.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f)) *
 		glm::mat4_cast(m_orientationQuaternion);
 
-	m_viewProject = glm::perspective(glm::radians(45.0f), aspectRatio, 0.1f, 100.0f)*
-		glm::lookAt(glm::vec3(0.0f, 0.0f, -9.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 
 	float offset = m_cubieRenderer.GetCubieExtension() + 0.1f;
 	for (int i = 0; i < 3; ++i)
@@ -34,6 +31,7 @@ void CompoundCube::Render(float aspectRatio)
 		{
 			for (int k = 0; k < 3; ++k)
 			{
+				
 				glm::mat4 compound = glm::translate(globalTransformation, glm::vec3((i - 1) * offset, (j - 1) * offset, (k - 1)*offset));
 				compound = glm::rotate(compound, glm::radians(90.0f)* (i % 2), glm::vec3(1.0f, 0.0f, 0.0f));
 				compound = glm::rotate(compound, glm::radians(90.0f)* (j % 2), glm::vec3(0.0f, 1.0f, 0.0f));
@@ -41,6 +39,7 @@ void CompoundCube::Render(float aspectRatio)
 
 
 				m_cubieRenderer.Render(compound);
+				
 			}
 		}
 	}
@@ -77,13 +76,6 @@ void CompoundCube::Update(double deltaTime)
 	if (m_input.IsKeyDown(GLFW_KEY_LEFT))
 	{
 		yVel = glm::radians(-90.0f);
-	}
-
-	if (m_input.isLeftMouseButtonDown())
-	{
-		glm::vec3 position, direction;
-
-		m_input.GetPickingRay(m_viewProject, position, direction);
 	}
 
 
