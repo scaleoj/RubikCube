@@ -54,6 +54,9 @@
     <ClInclude Include="Test\TestCompoundCube.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="Model\MiniCube.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -96,6 +99,9 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="Test\TestCubie.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\MiniCube.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

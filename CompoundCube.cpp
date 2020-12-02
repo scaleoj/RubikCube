@@ -13,6 +13,17 @@ void CompoundCube::Initialize(GLFWwindow* window)
 	m_input.ObserveKey(GLFW_KEY_UP);
 	m_input.ObserveKey(GLFW_KEY_DOWN);
 
+	for (int i = 0; i < 3; i++)
+	{
+		for (int j = 0; j < 3; j++)
+		{
+			for (int k = 0; k < 3; k++)
+			{
+				m_model[i][j][k] = MiniCube();
+			}
+		}
+	}
+
 
 	m_cubieRenderer.Initialize();
 }
