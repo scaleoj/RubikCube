@@ -18,9 +18,15 @@ void Model::Initialize()
 
 void Model::RotateX(bool direction, int disc)
 {
+	if (disc > 2)
+	{
+		std::cout << "Error: Wrong Disc Dimension on X-Rotation" << std::endl;
+		return;
+	}
+
 	MiniCube tempO;
 	MiniCube tempI;
-	if (direction)
+	if (direction) //positive rotation on X-Axis direction from zero point
 	{
 		tempO = m_model[disc][0][0];
 		tempI = m_model[disc][1][0];
@@ -34,7 +40,7 @@ void Model::RotateX(bool direction, int disc)
 		m_model[disc][0][1] = tempI;
 
 	}
-	else
+	else //negative rotation in on X-Axis from zero point
 	{
 		tempO = m_model[disc][0][0];
 		tempI = m_model[disc][1][0];
@@ -61,9 +67,15 @@ void Model::RotateX(bool direction, int disc)
 
 void Model::RotateY(bool direction, int disc)
 {
+	if (disc > 2)
+	{
+		std::cout << "Error: Wrong Disc Dimension on Y-Rotation" << std::endl;
+		return;
+	}
+
 	MiniCube tempO;
 	MiniCube tempI;
-	if (direction)
+	if (direction) //positive rotation on Y-Axis from zero point
 	{
 		tempO = m_model[0][disc][0];
 		tempI = m_model[1][disc][0];
@@ -77,7 +89,7 @@ void Model::RotateY(bool direction, int disc)
 		m_model[0][disc][1] = tempI;
 
 	}
-	else
+	else //negative rotation on Y Axis from zero point
 	{
 		tempO = m_model[0][disc][0];
 		tempI = m_model[1][disc][0];
@@ -103,9 +115,15 @@ void Model::RotateY(bool direction, int disc)
 
 void Model::RotateZ(bool direction, int disc)
 {
+	if (disc > 2)
+	{
+		std::cout << "Error: Wrong Disc Dimension on Z-Rotation" << std::endl;
+		return;
+	}
+
 	MiniCube tempO;
 	MiniCube tempI;
-	if (direction)
+	if (direction) //positive rotation on Z-Axis from zero point
 	{
 		tempO = m_model[0][0][disc];
 		tempI = m_model[1][0][disc];
@@ -118,7 +136,7 @@ void Model::RotateZ(bool direction, int disc)
 		m_model[1][2][disc] = m_model[0][1][disc];
 		m_model[0][1][disc] = tempI;
 	}
-	else
+	else //negative rotation on Z-Axis from zero point
 	{
 		tempO = m_model[0][0][disc];
 		tempI = m_model[1][0][disc];

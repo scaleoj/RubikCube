@@ -15,10 +15,11 @@ void CompoundCube::Initialize(GLFWwindow* window)
 
 	m_model.Initialize();
 	m_model.PrintModel();
-	m_model.RotateZ(true, 0);
+	m_model.RotateX(true, 0);
 	m_model.PrintModel();
-	m_model.RotateZ(false, 0);
-	m_model.RotateZ(false, 0);
+	m_model.RotateY(true, 2);
+	m_model.PrintModel();
+	m_model.RotateZ(true, 1);
 	m_model.PrintModel();
 
 	m_cubieRenderer.Initialize();
