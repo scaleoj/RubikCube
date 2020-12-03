@@ -1,8 +1,8 @@
 #pragma once
 #include "GameInterface.h"
 #include "CubieRenderer.h"
+#include "Model/Model.h"
 #include "InputSystem.h"
-#include "Model/MiniCube.h"
 #include <glm/ext/quaternion_float.hpp>
 
 class CompoundCube : public GameInterface
@@ -16,8 +16,9 @@ public:
 private:
 	CubieRenderer m_cubieRenderer;
 	InputSystem m_input;
+	Model m_model;
 	glm::quat m_orientationQuaternion;
 	glm::mat4 m_viewProject;
-	MiniCube m_model[3][3][3];
+	
 };
 

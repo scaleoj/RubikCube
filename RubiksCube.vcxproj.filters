@@ -57,6 +57,9 @@
     <ClInclude Include="Model\MiniCube.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="Model\Model.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -102,6 +105,9 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="Model\MiniCube.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\Model.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

@@ -166,6 +166,7 @@
     <ClInclude Include="GameInterface.h" />
     <ClInclude Include="InputSystem.h" />
     <ClInclude Include="KeyboardObserver.h" />
+    <ClInclude Include="Model\Model.h" />
     <ClInclude Include="Model\MiniCube.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="ShaderUtil.h" />
@@ -182,6 +183,7 @@
     <ClCompile Include="GameInterface.cpp" />
     <ClCompile Include="InputSystem.cpp" />
     <ClCompile Include="KeyboardObserver.cpp" />
+    <ClCompile Include="Model\Model.cpp" />
     <ClCompile Include="Model\MiniCube.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

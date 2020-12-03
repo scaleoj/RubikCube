@@ -8,6 +8,12 @@ public:
 	void rotateX(bool direction);
 	void rotateY(bool direction);
 	void rotateZ(bool direction);
+	std::string GetTop();
+	std::string GetBottom();
+	std::string GetLeft();
+	std::string GetRight();
+	std::string GetFront();
+	std::string GetBack();
 
 private:
 	std::string left;

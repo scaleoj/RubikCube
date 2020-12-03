@@ -71,3 +71,35 @@ void MiniCube::rotateZ(bool direction)
 		left = rotateHelp;
 	}
 }
+
+std::string MiniCube::GetTop()
+{
+	return top;
+}
+
+std::string MiniCube::GetBottom()
+{
+	return bottom;
+}
+
+std::string MiniCube::GetLeft()
+{
+	return left;
+}
+
+std::string MiniCube::GetRight()
+{
+	return right;
+}
+
+std::string MiniCube::GetFront()
+{
+	return front;
+}
+
+std::string MiniCube::GetBack()
+{
+	return back;
+}
+
+
