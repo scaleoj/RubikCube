@@ -181,9 +181,10 @@ void Model::PrintModel()
 	std::cout << "[--][--][--][" + m_model[0][2][1].GetBottom() + "][" + m_model[1][2][1].GetBottom() + "][" + m_model[2][2][1].GetBottom() + "][--][--][--]" << std::endl;
 	std::cout << "[--][--][--][" + m_model[0][2][2].GetBottom() + "][" + m_model[1][2][2].GetBottom() + "][" + m_model[2][2][2].GetBottom() + "][--][--][--]" << std::endl;
 
-	std::cout << "[--][--][--][" + m_model[0][0][2].GetBack() + "][" + m_model[1][0][2].GetBack() + "][" + m_model[2][0][2].GetBack() + "][--][--][--]" << std::endl;
-	std::cout << "[--][--][--][" + m_model[0][1][2].GetBack() + "][" + m_model[1][1][2].GetBack() + "][" + m_model[2][1][2].GetBack() + "][--][--][--]" << std::endl;
 	std::cout << "[--][--][--][" + m_model[0][2][2].GetBack() + "][" + m_model[1][2][2].GetBack() + "][" + m_model[2][2][2].GetBack() + "][--][--][--]" << std::endl;
+	std::cout << "[--][--][--][" + m_model[0][1][2].GetBack() + "][" + m_model[1][1][2].GetBack() + "][" + m_model[2][1][2].GetBack() + "][--][--][--]" << std::endl;
+	std::cout << "[--][--][--][" + m_model[0][0][2].GetBack() + "][" + m_model[1][0][2].GetBack() + "][" + m_model[2][0][2].GetBack() + "][--][--][--]" << std::endl;
+
 	
 	std::cout << std::endl;
 	std::cout << "------------------------------------" << std::endl;

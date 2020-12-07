@@ -93,7 +93,7 @@ void CompoundCube::TestCube()
 	m_model.PrintModel();
 	m_model.RotateX(true, 0);
 	m_model.PrintModel();
-	m_model.RotateZ(true, 0);
+	m_model.RotateY(true, 0);
 	m_model.PrintModel();
 
 }
