@@ -2,12 +2,12 @@
 
 MiniCube::MiniCube()
 {
-	left = "lr";
-	right = "dr";
-	front = "lg";
-	back = "dg";
-	bottom = "lb";
-	top = "db";
+	left = "re";
+	right = "pu";
+	front = "gr";
+	back = "bl";
+	bottom = "wh";
+	top = "ye";
 	rotateHelp = "";
 };
 

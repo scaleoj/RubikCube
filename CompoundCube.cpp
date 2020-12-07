@@ -13,14 +13,7 @@ void CompoundCube::Initialize(GLFWwindow* window)
 	m_input.ObserveKey(GLFW_KEY_UP);
 	m_input.ObserveKey(GLFW_KEY_DOWN);
 
-	m_model.Initialize();
-	m_model.PrintModel();
-	m_model.RotateX(true, 0);
-	m_model.PrintModel();
-	m_model.RotateY(true, 2);
-	m_model.PrintModel();
-	m_model.RotateZ(true, 1);
-	m_model.PrintModel();
+	TestCube();
 
 	m_cubieRenderer.Initialize();
 }
@@ -92,7 +85,15 @@ void CompoundCube::Update(double deltaTime)
 	m_orientationQuaternion += 0.5f * ((float)deltaTime) *velocityQuaternion * m_orientationQuaternion;
 	m_orientationQuaternion = normalize(m_orientationQuaternion);
 
+}
 
+void CompoundCube::TestCube()
+{
+	m_model.Initialize();
+	m_model.PrintModel();
+	m_model.RotateX(true, 0);
+	m_model.PrintModel();
+	m_model.RotateZ(true, 0);
+	m_model.PrintModel();
 
-	
 }

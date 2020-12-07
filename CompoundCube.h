@@ -19,6 +19,7 @@ private:
 	Model m_model;
 	glm::quat m_orientationQuaternion;
 	glm::mat4 m_viewProject;
+	void TestCube();
 	
 };
 

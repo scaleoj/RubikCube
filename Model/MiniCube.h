@@ -23,5 +23,6 @@ private:
 	std::string bottom;
 	std::string top;
 	std::string rotateHelp;
+
 };
 
