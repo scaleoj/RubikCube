@@ -169,21 +169,21 @@ void Model::RotateZ(bool direction, int disc)
 
 void Model::PrintModel()
 {
-	std::cout << "[--][--][--][" + m_model[0][0][2].GetTop() + "][" + m_model[1][0][2].GetTop() + "][" + m_model[2][0][2].GetTop() + "][--][--][--]" << std::endl;
-	std::cout << "[--][--][--][" + m_model[0][0][1].GetTop() + "][" + m_model[1][0][1].GetTop() + "][" + m_model[2][0][1].GetTop() + "][--][--][--]" << std::endl;
-	std::cout << "[--][--][--][" + m_model[0][0][0].GetTop() + "][" + m_model[1][0][0].GetTop() + "][" + m_model[2][0][0].GetTop() + "][--][--][--]" << std::endl;
+	std::cout << "[--][--][--][" + m_model[0][0][2].GetFacingString(0) + "][" + m_model[1][0][2].GetFacingString(0) + "][" + m_model[2][0][2].GetFacingString(0) + "][--][--][--]" << std::endl;
+	std::cout << "[--][--][--][" + m_model[0][0][1].GetFacingString(0) + "][" + m_model[1][0][1].GetFacingString(0) + "][" + m_model[2][0][1].GetFacingString(0) + "][--][--][--]" << std::endl;
+	std::cout << "[--][--][--][" + m_model[0][0][0].GetFacingString(0) + "][" + m_model[1][0][0].GetFacingString(0) + "][" + m_model[2][0][0].GetFacingString(0) + "][--][--][--]" << std::endl;
 
-	std::cout << "[" + m_model[0][0][2].GetLeft() + "][" + m_model[0][0][1].GetLeft() + "][" + m_model[0][0][0].GetLeft() + "][" + m_model[0][0][0].GetFront() + "][" + m_model[1][0][0].GetFront() + "][" + m_model[2][0][0].GetFront() + "][" + m_model[2][0][0].GetRight() + "][" + m_model[2][0][1].GetRight() + "][" + m_model[2][0][2].GetRight() + "]" << std::endl;
-	std::cout << "[" + m_model[0][1][2].GetLeft() + "][" + m_model[0][1][1].GetLeft() + "][" + m_model[0][1][0].GetLeft() + "][" + m_model[0][1][0].GetFront() + "][" + m_model[1][1][0].GetFront() + "][" + m_model[2][1][0].GetFront() + "][" + m_model[2][1][0].GetRight() + "][" + m_model[2][1][1].GetRight() + "][" + m_model[2][1][2].GetRight() + "]" << std::endl;
-	std::cout << "[" + m_model[0][2][2].GetLeft() + "][" + m_model[0][2][1].GetLeft() + "][" + m_model[0][2][0].GetLeft() + "][" + m_model[0][2][0].GetFront() + "][" + m_model[1][2][0].GetFront() + "][" + m_model[2][2][0].GetFront() + "][" + m_model[2][2][0].GetRight() + "][" + m_model[2][2][1].GetRight() + "][" + m_model[2][2][2].GetRight() + "]" << std::endl;
+	std::cout << "[" + m_model[0][0][2].GetFacingString(1) + "][" + m_model[0][0][1].GetFacingString(1) + "][" + m_model[0][0][0].GetFacingString(1) + "][" + m_model[0][0][0].GetFacingString(2) + "][" + m_model[1][0][0].GetFacingString(2) + "][" + m_model[2][0][0].GetFacingString(2) + "][" + m_model[2][0][0].GetFacingString(3) + "][" + m_model[2][0][1].GetFacingString(3) + "][" + m_model[2][0][2].GetFacingString(3) + "]" << std::endl;
+	std::cout << "[" + m_model[0][1][2].GetFacingString(1) + "][" + m_model[0][1][1].GetFacingString(1) + "][" + m_model[0][1][0].GetFacingString(1) + "][" + m_model[0][1][0].GetFacingString(2) + "][" + m_model[1][1][0].GetFacingString(2) + "][" + m_model[2][1][0].GetFacingString(2) + "][" + m_model[2][1][0].GetFacingString(3) + "][" + m_model[2][1][1].GetFacingString(3) + "][" + m_model[2][1][2].GetFacingString(3) + "]" << std::endl;
+	std::cout << "[" + m_model[0][2][2].GetFacingString(1) + "][" + m_model[0][2][1].GetFacingString(1) + "][" + m_model[0][2][0].GetFacingString(1) + "][" + m_model[0][2][0].GetFacingString(2) + "][" + m_model[1][2][0].GetFacingString(2) + "][" + m_model[2][2][0].GetFacingString(2) + "][" + m_model[2][2][0].GetFacingString(3) + "][" + m_model[2][2][1].GetFacingString(3) + "][" + m_model[2][2][2].GetFacingString(3) + "]" << std::endl;
 
-	std::cout << "[--][--][--][" + m_model[0][2][0].GetBottom() + "][" + m_model[1][2][0].GetBottom() + "][" + m_model[2][2][0].GetBottom() + "][--][--][--]" << std::endl;
-	std::cout << "[--][--][--][" + m_model[0][2][1].GetBottom() + "][" + m_model[1][2][1].GetBottom() + "][" + m_model[2][2][1].GetBottom() + "][--][--][--]" << std::endl;
-	std::cout << "[--][--][--][" + m_model[0][2][2].GetBottom() + "][" + m_model[1][2][2].GetBottom() + "][" + m_model[2][2][2].GetBottom() + "][--][--][--]" << std::endl;
+	std::cout << "[--][--][--][" + m_model[0][2][0].GetFacingString(4) + "][" + m_model[1][2][0].GetFacingString(4) + "][" + m_model[2][2][0].GetFacingString(4) + "][--][--][--]" << std::endl;
+	std::cout << "[--][--][--][" + m_model[0][2][1].GetFacingString(4) + "][" + m_model[1][2][1].GetFacingString(4) + "][" + m_model[2][2][1].GetFacingString(4) + "][--][--][--]" << std::endl;
+	std::cout << "[--][--][--][" + m_model[0][2][2].GetFacingString(4) + "][" + m_model[1][2][2].GetFacingString(4) + "][" + m_model[2][2][2].GetFacingString(4) + "][--][--][--]" << std::endl;
 
-	std::cout << "[--][--][--][" + m_model[0][2][2].GetBack() + "][" + m_model[1][2][2].GetBack() + "][" + m_model[2][2][2].GetBack() + "][--][--][--]" << std::endl;
-	std::cout << "[--][--][--][" + m_model[0][1][2].GetBack() + "][" + m_model[1][1][2].GetBack() + "][" + m_model[2][1][2].GetBack() + "][--][--][--]" << std::endl;
-	std::cout << "[--][--][--][" + m_model[0][0][2].GetBack() + "][" + m_model[1][0][2].GetBack() + "][" + m_model[2][0][2].GetBack() + "][--][--][--]" << std::endl;
+	std::cout << "[--][--][--][" + m_model[0][2][2].GetFacingString(5) + "][" + m_model[1][2][2].GetFacingString(5) + "][" + m_model[2][2][2].GetFacingString(5) + "][--][--][--]" << std::endl;
+	std::cout << "[--][--][--][" + m_model[0][1][2].GetFacingString(5) + "][" + m_model[1][1][2].GetFacingString(5) + "][" + m_model[2][1][2].GetFacingString(5) + "][--][--][--]" << std::endl;
+	std::cout << "[--][--][--][" + m_model[0][0][2].GetFacingString(5) + "][" + m_model[1][0][2].GetFacingString(5) + "][" + m_model[2][0][2].GetFacingString(5) + "][--][--][--]" << std::endl;
 
 	
 	std::cout << std::endl;

@@ -1,4 +1,5 @@
 #include <string>
+#include <vector>
 
 #pragma once
 class MiniCube
@@ -8,21 +9,23 @@ public:
 	void rotateX(bool direction);
 	void rotateY(bool direction);
 	void rotateZ(bool direction);
-	std::string GetTop();
-	std::string GetBottom();
-	std::string GetLeft();
-	std::string GetRight();
-	std::string GetFront();
-	std::string GetBack();
+	std::string GetFacingString(int side);
+	std::vector<float> GetTop();
+	std::vector<float> GetBottom();
+	std::vector<float> GetLeft();
+	std::vector<float> GetRight();
+	std::vector<float> GetFront();
+	std::vector<float> GetBack();
 
 private:
-	std::string left;
-	std::string right;
-	std::string front;
-	std::string back;
-	std::string bottom;
-	std::string top;
-	std::string rotateHelp;
+	std::vector<float> left;
+	std::vector<float> right;
+	std::vector<float> front;
+	std::vector<float> back;
+	std::vector<float> bottom;
+	std::vector<float> top;
+	std::vector<float> rotateHelp;
+	std::string ConvertVectorToString(std::vector<float> color);
 
 };
 
