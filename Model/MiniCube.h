@@ -1,5 +1,5 @@
 #include <string>
-#include <vector>
+#include <glm/gtc/type_ptr.hpp>
 
 #pragma once
 class MiniCube
@@ -10,22 +10,23 @@ public:
 	void rotateY(bool direction);
 	void rotateZ(bool direction);
 	std::string GetFacingString(int side);
-	std::vector<float> GetTop();
-	std::vector<float> GetBottom();
-	std::vector<float> GetLeft();
-	std::vector<float> GetRight();
-	std::vector<float> GetFront();
-	std::vector<float> GetBack();
+	glm::vec4 GetTop();
+	glm::vec4 GetBottom();
+	glm::vec4 GetLeft();
+	glm::vec4 GetRight();
+	glm::vec4 GetFront();
+	glm::vec4 GetBack();
 
 private:
-	std::vector<float> left;
-	std::vector<float> right;
-	std::vector<float> front;
-	std::vector<float> back;
-	std::vector<float> bottom;
-	std::vector<float> top;
-	std::vector<float> rotateHelp;
-	std::string ConvertVectorToString(std::vector<float> color);
+	glm::vec4 left;
+	//std::vector<float> left;
+	glm::vec4 right;
+	glm::vec4 front;
+	glm::vec4 back;
+	glm::vec4 bottom;
+	glm::vec4 top;
+	glm::vec4 rotateHelp;
+	std::string ConvertVectorToString(glm::vec4 color);
 
 };
 

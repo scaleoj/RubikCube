@@ -102,45 +102,45 @@ std::string MiniCube::GetFacingString(int side)
 	return result;
 }
 
-std::vector<float> MiniCube::GetTop()
+glm::vec4 MiniCube::GetTop()
 {
 	return top;
 }
 
-std::vector<float> MiniCube::GetBottom()
+glm::vec4 MiniCube::GetBottom()
 {
 	return bottom;
 }
 
-std::vector<float> MiniCube::GetLeft()
+glm::vec4 MiniCube::GetLeft()
 {
 	return left;
 }
 
-std::vector<float> MiniCube::GetRight()
+glm::vec4 MiniCube::GetRight()
 {
 	return right;
 }
 
-std::vector<float> MiniCube::GetFront()
+glm::vec4 MiniCube::GetFront()
 {
 	return front;
 }
 
-std::vector<float> MiniCube::GetBack()
+glm::vec4 MiniCube::GetBack()
 {
 	return back;
 }
 
-std::string MiniCube::ConvertVectorToString(std::vector<float> color)
+std::string MiniCube::ConvertVectorToString(glm::vec4 color)
 {
 	std::string result = "";
 
-	if (color.at(0) > 0.5f)
+	if (color.x > 0.5f)
 	{
-		if (color.at(1) > 0.5f)
+		if (color.y > 0.5f)
 		{
-			if (color.at(2) > 0.5f)
+			if (color.z > 0.5f)
 			{
 				result = "wh";
 			}
@@ -151,7 +151,7 @@ std::string MiniCube::ConvertVectorToString(std::vector<float> color)
 		}
 		else
 		{
-			if (color.at(2) > 0.5f)
+			if (color.z > 0.5f)
 			{
 				result = "pu";
 			}
@@ -163,7 +163,7 @@ std::string MiniCube::ConvertVectorToString(std::vector<float> color)
 	}
 	else
 	{
-		if (color.at(1) > 0.5f)
+		if (color.y > 0.5f)
 		{
 			result = "gr";
 		}

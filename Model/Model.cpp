@@ -167,6 +167,11 @@ void Model::RotateZ(bool direction, int disc)
 
 }
 
+ MiniCube Model::GetCube(int x, int y, int z)
+{
+	return m_model[x][y][z];
+}
+
 void Model::PrintModel()
 {
 	std::cout << "[--][--][--][" + m_model[0][0][2].GetFacingString(0) + "][" + m_model[1][0][2].GetFacingString(0) + "][" + m_model[2][0][2].GetFacingString(0) + "][--][--][--]" << std::endl;

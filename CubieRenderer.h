@@ -2,11 +2,13 @@
 #include <glm/mat4x4.hpp>
 #include <GL/glew.h>
 #include <vector>
+#include "Model/Model.h"
 
 class CubieRenderer
 {
 public:
 	void Initialize();
+	void Initialize(Model m_model);
 	void Render(const glm::mat4& transformationMatrix);
 	void ClearResources();
 

@@ -3,7 +3,13 @@
 #include <glm/gtc/type_ptr.hpp>
 #include <iostream>
 
+
 void CubieRenderer::Initialize()
+{
+
+}
+
+void CubieRenderer::Initialize(Model m_model)
 {
 	
 	float floatArray[6 * 6 * 3];
@@ -17,6 +23,7 @@ void CubieRenderer::Initialize()
 		{
 			AddSidePosition(sideType, direction, positionField);
 			AddSideColor(sideType, direction, colorField);
+
 		}
 	}
 	
@@ -100,9 +107,19 @@ void CubieRenderer::AddSideColor(int sideType, int direction, std::vector<glm::v
 {
 	glm::vec3 color = glm::vec3(0.0f);
 	
+
+	if (direction == 1)
+	{
+		//basecolor = 
+	}
+	else
+	{
+		//basecolor = 
+	}
+
 	float baseColor = (direction == 1) ? 0.5f : 1.0f;
 	color[sideType] = baseColor;
-
+	
 	for (int i = 0; i < 6; ++i)
 	{
 		colorArray.push_back(color);
