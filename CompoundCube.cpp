@@ -14,7 +14,7 @@ void CompoundCube::Initialize(GLFWwindow* window)
 	m_input.ObserveKey(GLFW_KEY_DOWN);
 
 	m_model.Initialize();
-	TestCube();
+	//TestCube();
 
 	m_cubieRenderer.Initialize(m_model);
 }
@@ -40,7 +40,7 @@ void CompoundCube::Render(float aspectRatio)
 				compound = glm::rotate(compound, glm::radians(0.0f)* (k % 2), glm::vec3(0.0f, 0.0f, 1.0f));
 
 
-				m_cubieRenderer.Render(compound, int i, int j, int k);
+				m_cubieRenderer.Render(compound);
 				
 			}
 		}

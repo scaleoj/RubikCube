@@ -18,7 +18,7 @@ private:
 	const float m_offset = 0.5f;
 
 	void AddSidePosition(int sideType, int direction, std::vector<glm::vec3>& positionArray);
-	void AddSideColor(int sideType, int direction, std::vector<glm::vec3>& colorArray);
+	void AddSideColor(int sideType, int direction, std::vector<glm::vec3>& colorArray, Model m_model);
 	void TranscribeToFloatArray(std::vector<glm::vec3>& vecArray, float* floatArray);
 
 	GLuint m_arrayBufferObject;

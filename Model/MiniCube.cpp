@@ -1,14 +1,15 @@
 #include "MiniCube.h"
+#include <iostream>
 
 MiniCube::MiniCube()
 {
-	left = { 1.0f, 0.0f, 0.0f, 1.0f }; //red
-	right = { 1.0f, 0.0f, 1.0f, 1.0f }; //purple
-	front = { 0.0f, 1.0f, 0.0f, 1.0f }; //green
-	back = { 0.0f, 0.0f, 1.0f, 1.0f }; //blue
-	bottom = { 1.0f, 1.0f, 1.0f, 1.0f }; //white
-	top = { 1.0f, 1.0f, 0.0f, 1.0f }; //yellow
-	rotateHelp = { 0.0f, 0.0f, 0.0f, 1.0f };
+	left = { 1.0f, 0.0f, 0.0f}; //red
+	right = { 0.1f, 0.7f, 1.0f}; //purple
+	front = { 0.0f, 1.0f, 0.0f}; //green
+	back = { 0.0f, 0.0f, 1.0f}; //blue
+	bottom = { 0.9f, 0.9f, 0.9f}; //white
+	top = { 1.0f, 1.0f, 0.0f}; //yellow
+	rotateHelp = { 0.0f, 0.0f, 0.0f};
 }
 
 	void MiniCube::rotateX(bool direction)
@@ -71,6 +72,52 @@ void MiniCube::rotateZ(bool direction)
 	}
 }
 
+glm::vec3 MiniCube::GetFacingData(int direction, int sideType)
+{
+	glm::vec3 result;
+	std::cout << "sideType: " << sideType << std::endl;
+	std::cout << "direction: " << direction << std::endl;
+	switch (sideType)
+	{
+	case 0:
+		if (direction == 1)
+		{
+			result = left;
+			std::cout << "left" << std::endl;
+			
+		}
+		else
+		{
+			result = right;
+		}
+		break;
+	case 1:
+		if (direction == 1)
+		{
+			result = top;
+		}
+		else
+		{
+			result = bottom;
+		}
+		break;
+	case 2:
+		if (direction == -1)
+		{
+			result = front;
+		}
+		else
+		{
+			result = back;
+		}
+		break;
+	default:
+		break;
+	}
+
+	return result;
+}
+
 std::string MiniCube::GetFacingString(int side)
 {
 	std::string result = "";
@@ -102,37 +149,37 @@ std::string MiniCube::GetFacingString(int side)
 	return result;
 }
 
-glm::vec4 MiniCube::GetTop()
+glm::vec3 MiniCube::GetTop()
 {
 	return top;
 }
 
-glm::vec4 MiniCube::GetBottom()
+glm::vec3 MiniCube::GetBottom()
 {
 	return bottom;
 }
 
-glm::vec4 MiniCube::GetLeft()
+glm::vec3 MiniCube::GetLeft()
 {
 	return left;
 }
 
-glm::vec4 MiniCube::GetRight()
+glm::vec3 MiniCube::GetRight()
 {
 	return right;
 }
 
-glm::vec4 MiniCube::GetFront()
+glm::vec3 MiniCube::GetFront()
 {
 	return front;
 }
 
-glm::vec4 MiniCube::GetBack()
+glm::vec3 MiniCube::GetBack()
 {
 	return back;
 }
 
-std::string MiniCube::ConvertVectorToString(glm::vec4 color)
+std::string MiniCube::ConvertVectorToString(glm::vec3 color)
 {
 	std::string result = "";
 

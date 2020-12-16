@@ -22,7 +22,7 @@ void CubieRenderer::Initialize(Model m_model)
 		for (int direction = -1; direction < 2; direction += 2)
 		{
 			AddSidePosition(sideType, direction, positionField);
-			AddSideColor(sideType, direction, colorField);
+			AddSideColor(sideType, direction, colorField, m_model);
 
 		}
 	}
@@ -103,23 +103,11 @@ void CubieRenderer::AddSidePosition(int sideType, int direction, std::vector<glm
 	
 }
 
-void CubieRenderer::AddSideColor(int sideType, int direction, std::vector<glm::vec3>& colorArray)
+void CubieRenderer::AddSideColor(int sideType, int direction, std::vector<glm::vec3>& colorArray, Model m_model)
 {
-	glm::vec3 color = glm::vec3(0.0f);
-	
 
-	if (direction == 1)
-	{
-		//basecolor = 
-	}
-	else
-	{
-		//basecolor = 
-	}
+	glm::vec3 color = m_model.GetCube(0, 0, 0).GetFacingData(direction, sideType);
 
-	float baseColor = (direction == 1) ? 0.5f : 1.0f;
-	color[sideType] = baseColor;
-	
 	for (int i = 0; i < 6; ++i)
 	{
 		colorArray.push_back(color);

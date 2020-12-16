@@ -9,24 +9,25 @@ public:
 	void rotateX(bool direction);
 	void rotateY(bool direction);
 	void rotateZ(bool direction);
+	glm::vec3 GetFacingData(int direction, int sideType);
 	std::string GetFacingString(int side);
-	glm::vec4 GetTop();
-	glm::vec4 GetBottom();
-	glm::vec4 GetLeft();
-	glm::vec4 GetRight();
-	glm::vec4 GetFront();
-	glm::vec4 GetBack();
+	glm::vec3 GetTop();
+	glm::vec3 GetBottom();
+	glm::vec3 GetLeft();
+	glm::vec3 GetRight();
+	glm::vec3 GetFront();
+	glm::vec3 GetBack();
 
 private:
-	glm::vec4 left;
+	glm::vec3 left;
 	//std::vector<float> left;
-	glm::vec4 right;
-	glm::vec4 front;
-	glm::vec4 back;
-	glm::vec4 bottom;
-	glm::vec4 top;
-	glm::vec4 rotateHelp;
-	std::string ConvertVectorToString(glm::vec4 color);
+	glm::vec3 right;
+	glm::vec3 front;
+	glm::vec3 back;
+	glm::vec3 bottom;
+	glm::vec3 top;
+	glm::vec3 rotateHelp;
+	std::string ConvertVectorToString(glm::vec3 color);
 
 };
 
