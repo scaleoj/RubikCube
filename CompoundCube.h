@@ -2,6 +2,7 @@
 #include "GameInterface.h"
 #include "CubieRenderer.h"
 #include "Model/Model.h"
+#include "Model/MiniCube.h"
 #include "InputSystem.h"
 #include <glm/ext/quaternion_float.hpp>
 
@@ -19,6 +20,7 @@ private:
 	Model m_model;
 	glm::quat m_orientationQuaternion;
 	glm::mat4 m_viewProject;
+	bool first;
 	void TestCube();
 	
 };
