@@ -6,7 +6,6 @@
 
 void CompoundCube::Initialize(GLFWwindow* window)
 {
-	first = true;
 	m_input.SetWindow(window);
 
 	m_input.ObserveKey(GLFW_KEY_SPACE);
@@ -35,20 +34,8 @@ void CompoundCube::Render(float aspectRatio)
 		{
 			for (int k = 0; k < 3; ++k)
 			{
-				glm::mat4 compound;
-				MiniCube temp = m_model.GetCube(i, j, k);
-				//compound = glm::translate(globalTransformation, glm::vec3((i - 1) * offset, (j - 1) * offset, (k - 1)*offset));
-				
-				if (j==0||first)
-				{
-					compound = glm::translate(globalTransformation, glm::vec3((i - 1) * offset, (j - 1) * offset, (k - 1)*offset));
-					temp.setAlignment(compound);
-				}
-				else
-				{
-					compound = temp.getAlignment();
-					
-				}
+
+				glm::mat4 compound = glm::translate(globalTransformation, glm::vec3((i - 1) * offset, (j - 1) * offset, (k - 1)*offset));
 
 				//compound = glm::rotate(compound, glm::radians(0.0f)* (i % 2), glm::vec3(1.0f, 0.0f, 0.0f));
 				//compound = glm::rotate(compound, glm::radians(0.0f)* (j % 2), glm::vec3(0.0f, 1.0f, 0.0f));
@@ -58,7 +45,6 @@ void CompoundCube::Render(float aspectRatio)
 			}
 		}
 	}
-	first = false;
 }
 
 void CompoundCube::ClearResources()

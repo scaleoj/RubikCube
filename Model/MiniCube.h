@@ -9,8 +9,6 @@ public:
 	void rotateX(bool direction);
 	void rotateY(bool direction);
 	void rotateZ(bool direction);
-	void setAlignment(glm::mat4 newAlignment);
-	glm::mat4 getAlignment();
 	glm::vec3 GetFacingData(int direction, int sideType);
 	std::string GetFacingString(int side);
 	glm::vec3 GetTop();
@@ -31,7 +29,6 @@ private:
 	glm::vec3 top;
 	glm::vec3 rotateHelp;
 	std::string ConvertVectorToString(glm::vec3 color);
-	glm::mat4 alignment;
 
 
 };

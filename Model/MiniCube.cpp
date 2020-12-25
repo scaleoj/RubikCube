@@ -11,8 +11,6 @@ MiniCube::MiniCube()
 	top = { 1.0f, 1.0f, 0.0f}; //yellow
 	rotateHelp = { 0.0f, 0.0f, 0.0f};
 
-	alignment = glm::mat4(0.0f);
-
 }
 
 	void MiniCube::rotateX(bool direction)
@@ -75,17 +73,7 @@ void MiniCube::rotateZ(bool direction)
 	}
 
 }
-void MiniCube::setAlignment(glm::mat4 newAlignment)
-{
-	
-	alignment = newAlignment;
-	
-}
 
-glm::mat4 MiniCube::getAlignment()
-{
-	return alignment;
-}
 
 glm::vec3 MiniCube::GetFacingData(int direction, int sideType)
 {
