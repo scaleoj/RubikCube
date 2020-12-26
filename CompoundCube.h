@@ -20,8 +20,16 @@ private:
 	Model m_model;
 	glm::quat m_orientationQuaternion;
 	glm::mat4 m_viewProject;
-	bool first;
 	void TestCube();
+	bool boolA;
+	bool boolD;
+	bool boolQ;
+	bool boolE;
+	bool boolW;
+	bool boolS;
+	bool isBusy;
+	int disc;
+
 	
 };
 
