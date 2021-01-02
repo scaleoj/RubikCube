@@ -8,12 +8,14 @@ class CubieRenderer
 {
 public:
 	void Initialize();
-	void Initialize(Model m_model);
 	void Render(const glm::mat4& transformationMatrix);
 	void ClearResources();
-	void BuildCubeInformation(int i, int j, int k);
+	void ChangeSideColor(int i, int j, int k);
 
 	float GetCubieExtension() const { return 2.0f * m_offset; }
+	void RotateX(bool dir, int disc);
+	void RotateY(bool dir, int disc);
+	void RotateZ(bool dir, int disc);
 
 private:
 	const float m_offset = 0.5f;
@@ -21,6 +23,7 @@ private:
 	void AddSidePosition(int sideType, int direction, std::vector<glm::vec3>& positionArray);
 	void AddSideColor(int sideType, int direction, std::vector<glm::vec3>& colorArray, int i, int j, int k);
 	void TranscribeToFloatArray(std::vector<glm::vec3>& vecArray, float* floatArray);
+	
 	
 	Model model;
 	float floatArray[6 * 6 * 3];
