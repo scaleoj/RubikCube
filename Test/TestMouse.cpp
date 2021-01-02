@@ -17,7 +17,7 @@ void TestMouse::Render(float aspectRatio)
 
 	glm::mat4 finalMat = glm::translate(m_viewProject, m_cubePosition);
 
-	m_cubieRenderer.Render(finalMat);
+	//m_cubieRenderer.Render(finalMat);
 }
 
 void TestMouse::ClearResources()

@@ -4,7 +4,7 @@
 MiniCube::MiniCube()
 {
 	left = { 1.0f, 0.0f, 0.0f}; //red
-	right = { 0.1f, 0.7f, 1.0f}; //purple
+	right = { 0.6f, 0.4f, 1.0f}; //purple
 	front = { 0.0f, 1.0f, 0.0f}; //green
 	back = { 0.0f, 0.0f, 1.0f}; //blue
 	bottom = { 0.9f, 0.9f, 0.9f}; //white
@@ -190,6 +190,7 @@ std::string MiniCube::ConvertVectorToString(glm::vec3 color)
 			if (color.z > 0.5f)
 			{
 				result = "wh";
+				
 			}
 			else
 			{

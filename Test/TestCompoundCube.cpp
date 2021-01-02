@@ -28,7 +28,7 @@ void TestCompoundCube::Render(float aspectRatio)
 				compound = glm::rotate(compound, glm::radians(90.0f)* (k % 2), glm::vec3(0.0f, 0.0f, 1.0f));
 
 
-				m_cubieRenderer.Render(compound);
+				//m_cubieRenderer.Render(compound);
 			}
 		}
 	}

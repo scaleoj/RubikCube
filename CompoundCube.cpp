@@ -33,6 +33,7 @@ void CompoundCube::Initialize(GLFWwindow* window)
 
 	m_model.Initialize();
 	//TestCube();
+	m_model.PrintModel();
 
 	m_cubieRenderer.Initialize(m_model);
 }
@@ -62,14 +63,17 @@ void CompoundCube::Render(float aspectRatio)
 					if (boolW)
 					{
 						dir = 90.0f;
-						//compound = glm::translate(compound, glm::vec3())
+
+						
 					}
 					else
 					{
 						dir = -90.0f;
+
+
 						
 					}
-					compound = glm::rotate(compound, glm::radians(dir), glm::vec3(1.0f, 0.0f, 0.0f));
+					//compound = glm::rotate(compound, glm::radians(dir), glm::vec3(1.0f, 0.0f, 0.0f));
 					
 				}
 
@@ -79,12 +83,15 @@ void CompoundCube::Render(float aspectRatio)
 					if (boolA)
 					{
 						dir = -90.0f;
+
+
 					}
 					else
 					{
 						dir = 90.0f;
+
 					}
-					compound = glm::rotate(compound, glm::radians(dir), glm::vec3(0.0f, 1.0f, 0.0f));
+					//compound = glm::rotate(compound, glm::radians(dir), glm::vec3(0.0f, 1.0f, 0.0f));
 				}
 
 				if ((boolQ || boolE) && k == disc)
@@ -93,18 +100,20 @@ void CompoundCube::Render(float aspectRatio)
 					if (boolQ)
 					{
 						dir = -90.0f;
+
 					}
 					else
 					{
 						dir = 90.0f;
+
 					}
-					compound = glm::rotate(compound, glm::radians(dir), glm::vec3(0.0f, 0.0f, 1.0f));
+					//compound = glm::rotate(compound, glm::radians(dir), glm::vec3(0.0f, 0.0f, 1.0f));
 				}
 
 				//compound = glm::rotate(compound, glm::radians(0.0f)* (i % 2), glm::vec3(1.0f, 0.0f, 0.0f));
 				//compound = glm::rotate(compound, glm::radians(0.0f)* (j % 2), glm::vec3(0.0f, 1.0f, 0.0f));
 				//compound = glm::rotate(compound, glm::radians(0.0f)* (k % 2), glm::vec3(0.0f, 0.0f, 1.0f));
-				m_cubieRenderer.Render(compound);
+				m_cubieRenderer.Render(compound, i, j, k);
 				
 			}
 		}
@@ -155,6 +164,8 @@ void CompoundCube::Update(double deltaTime)
 	{
 		boolA = true;
 		isBusy = true;
+		m_model.RotateY(false, disc);
+		m_model.PrintModel();
 	}
 	if (m_input.WasKeyReleased(GLFW_KEY_A))
 	{
@@ -165,6 +176,8 @@ void CompoundCube::Update(double deltaTime)
 	{
 		boolD = true;
 		isBusy = true;
+		m_model.RotateY(true, disc);
+		m_model.PrintModel();
 	}
 	if (m_input.WasKeyReleased(GLFW_KEY_D))
 	{
@@ -177,6 +190,8 @@ void CompoundCube::Update(double deltaTime)
 	{
 		boolQ = true;
 		isBusy = true;
+		m_model.RotateZ(true, disc);
+		m_model.PrintModel();
 	}
 	if (m_input.WasKeyReleased(GLFW_KEY_Q))
 	{
@@ -187,6 +202,8 @@ void CompoundCube::Update(double deltaTime)
 	{
 		boolE = true;
 		isBusy = true;
+		m_model.RotateZ(false, disc);
+		m_model.PrintModel();
 	}
 	if (m_input.WasKeyReleased(GLFW_KEY_E))
 	{
@@ -199,6 +216,8 @@ void CompoundCube::Update(double deltaTime)
 	{
 		boolW = true;
 		isBusy = true;
+		m_model.RotateX(false, disc);
+		m_model.PrintModel();
 	}
 	if (m_input.WasKeyReleased(GLFW_KEY_W))
 	{
@@ -209,6 +228,8 @@ void CompoundCube::Update(double deltaTime)
 	{
 		boolS = true;
 		isBusy = true;
+		m_model.RotateX(true, disc);
+		m_model.PrintModel();
 	}
 	if (m_input.WasKeyReleased(GLFW_KEY_S))
 	{

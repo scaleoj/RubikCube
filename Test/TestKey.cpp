@@ -23,7 +23,7 @@ void TestKey::Render(float aspectRatio)
 		glm::lookAt(glm::vec3(0.0f, 0.0f, -3.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f))*
 		glm::mat4_cast(m_orientationQuaternion);
 
-	m_cubieRenderer.Render(globalTransformation);
+	//m_cubieRenderer.Render(globalTransformation);
 }
 
 void TestKey::ClearResources()
