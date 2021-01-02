@@ -96,7 +96,6 @@ void CubieRenderer::AddSideColor(int sideType, int direction, std::vector<glm::v
 {
 
 	glm::vec3 color = model.GetCube(i, j, k).GetFacingData(direction, sideType);
-	std::cout << color.x << ", " << color.y << ", " << color.z << std::endl;
 
 
 	for (int i = 0; i < 6; ++i)
