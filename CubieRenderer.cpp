@@ -21,9 +21,8 @@ void CubieRenderer::Initialize(Model m_model)
 	BuildCubeInformation(0, 0, 0);
 }
 
-void CubieRenderer::Render(const glm::mat4 & transformationMatrix, int i, int j, int k)
+void CubieRenderer::Render(const glm::mat4 & transformationMatrix)
 {
-	BuildCubeInformation(i, j, k);
 	glUseProgram(m_shaderProgram);
 	glBindVertexArray(m_arrayBufferObject);
 
@@ -109,8 +108,6 @@ void CubieRenderer::BuildCubeInformation(int i, int j, int k)
 
 		}
 	}
-
-
 
 	glGenVertexArrays(1, &m_arrayBufferObject);
 	glGenBuffers(2, m_vertexBufferObject);

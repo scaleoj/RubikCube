@@ -32,7 +32,6 @@ void CompoundCube::Initialize(GLFWwindow* window)
 	m_input.ObserveKey(GLFW_KEY_DOWN);
 
 	m_model.Initialize();
-	//TestCube();
 	m_model.PrintModel();
 
 	m_cubieRenderer.Initialize(m_model);
@@ -113,7 +112,9 @@ void CompoundCube::Render(float aspectRatio)
 				//compound = glm::rotate(compound, glm::radians(0.0f)* (i % 2), glm::vec3(1.0f, 0.0f, 0.0f));
 				//compound = glm::rotate(compound, glm::radians(0.0f)* (j % 2), glm::vec3(0.0f, 1.0f, 0.0f));
 				//compound = glm::rotate(compound, glm::radians(0.0f)* (k % 2), glm::vec3(0.0f, 0.0f, 1.0f));
-				m_cubieRenderer.Render(compound, i, j, k);
+				//m_cubieRenderer.BuildCubeInformation(i, j, k);
+				m_cubieRenderer.Render(compound);
+
 				
 			}
 		}
@@ -259,13 +260,3 @@ void CompoundCube::Update(double deltaTime)
 
 }
 
-void CompoundCube::TestCube()
-{
-
-	m_model.PrintModel();
-	m_model.RotateX(true, 0);
-	m_model.PrintModel();
-	m_model.RotateY(true, 0);
-	m_model.PrintModel();
-
-}

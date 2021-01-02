@@ -9,7 +9,7 @@ class CubieRenderer
 public:
 	void Initialize();
 	void Initialize(Model m_model);
-	void Render(const glm::mat4& transformationMatrix, int i, int j, int k);
+	void Render(const glm::mat4& transformationMatrix);
 	void ClearResources();
 	void BuildCubeInformation(int i, int j, int k);
 
