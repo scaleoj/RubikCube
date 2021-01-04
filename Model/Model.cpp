@@ -18,6 +18,7 @@ void Model::Initialize()
 
 void Model::RotateX(bool direction, int disc)
 {
+	
 	if (disc > 2)
 	{
 		std::cout << "Error: Wrong Disc Dimension on X-Rotation" << std::endl;

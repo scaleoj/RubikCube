@@ -13,7 +13,7 @@ void CompoundCube::Initialize(GLFWwindow* window)
 	m_input.ObserveKey(GLFW_KEY_RIGHT);
 	m_input.ObserveKey(GLFW_KEY_LEFT);
 	m_input.ObserveKey(GLFW_KEY_UP);
-	disc = 0;
+	disc = 2;
 	m_input.ObserveKey(GLFW_KEY_1);
 	m_input.ObserveKey(GLFW_KEY_2);
 	m_input.ObserveKey(GLFW_KEY_3);
@@ -40,6 +40,9 @@ void CompoundCube::Render(float aspectRatio)
 		glm::lookAt(glm::vec3(0.0f, 0.0f, -9.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f)) *
 		glm::mat4_cast(m_orientationQuaternion);
 
+	int i2;
+	int j2;
+
 
 	float offset = m_cubieRenderer.GetCubieExtension() + 0.1f;
 	for (int i = 0; i < 3; ++i)
@@ -49,8 +52,33 @@ void CompoundCube::Render(float aspectRatio)
 			for (int k = 0; k < 3; ++k)
 			{
 				glm::mat4 compound = glm::translate(globalTransformation, glm::vec3((i - 1) * offset, (j - 1) * offset, (k - 1)*offset));
+				if (i == 0)
+				{
+					i2 = 2;
+				}
+				else if (i == 1)
+				{
+					i2 = 1;
+				}
+				else
+				{
+					i2 = 0;
+				}
 
-				m_cubieRenderer.ChangeSideColor(i, j, k);
+				if (j == 0)
+				{
+					j2 = 2;
+				}
+				else if (j == 1)
+				{
+					j2 = 1;
+				}
+				else
+				{
+					j2 = 0;
+				}
+
+				m_cubieRenderer.ChangeSideColor(i2, j2, k);
 				m_cubieRenderer.Render(compound);				
 			}
 		}
