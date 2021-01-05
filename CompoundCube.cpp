@@ -44,6 +44,8 @@ void CompoundCube::Render(float aspectRatio)
 	int j2;
 
 
+
+
 	float offset = m_cubieRenderer.GetCubieExtension() + 0.1f;
 	for (int i = 0; i < 3; ++i)
 	{
@@ -51,7 +53,10 @@ void CompoundCube::Render(float aspectRatio)
 		{
 			for (int k = 0; k < 3; ++k)
 			{
+
+
 				glm::mat4 compound = glm::translate(globalTransformation, glm::vec3((i - 1) * offset, (j - 1) * offset, (k - 1)*offset));
+				
 				if (i == 0)
 				{
 					i2 = 2;
@@ -78,17 +83,23 @@ void CompoundCube::Render(float aspectRatio)
 					j2 = 0;
 				}
 
+				if ((isbusyWS) && i2 == disc)
+				{
+					compound = glm::rotate(compound, m_turningAngle, glm::vec3(1.0f, 0.0f, 0.0f));
+				}
+				if ((isbusyAD) && j2 == disc)
+				{
+					compound = glm::rotate(compound, m_turningAngle, glm::vec3(0.0f, 1.0f, 0.0f));
+				}
+				if ((isbusyQE) && k == disc)
+				{
+					compound = glm::rotate(compound, m_turningAngle, glm::vec3(0.0f, 0.0f, 1.0f));
+				}
 				m_cubieRenderer.ChangeSideColor(i2, j2, k);
 				m_cubieRenderer.Render(compound);				
 			}
 		}
 	}
-	boolA = false;
-	boolD = false;
-	boolQ = false;
-	boolE = false;
-	boolW = false;
-	boolS = false;
 }
 
 void CompoundCube::ClearResources()
@@ -129,24 +140,19 @@ void CompoundCube::Update(double deltaTime)
 	{
 		boolA = true;
 		isBusy = true;
-		
-		m_cubieRenderer.RotateY(false, disc);
+		isbusyAD = true;
+		angle = -90.0f;
 	}
-	if (m_input.WasKeyReleased(GLFW_KEY_A))
-	{
-		isBusy = false;
-	}
+
 
 	if (m_input.IsKeyDown(GLFW_KEY_D) && !isBusy)
 	{
 		boolD = true;
 		isBusy = true;
-		m_cubieRenderer.RotateY(true, disc);
+		isbusyAD = true;
+		angle = 90.0f;
 	}
-	if (m_input.WasKeyReleased(GLFW_KEY_D))
-	{
-		isBusy = false;
-	}
+
 
 
 
@@ -154,23 +160,19 @@ void CompoundCube::Update(double deltaTime)
 	{
 		boolQ = true;
 		isBusy = true;
-		m_cubieRenderer.RotateZ(true, disc);
+		isbusyQE = true;
+		angle = -90.0f;
 	}
-	if (m_input.WasKeyReleased(GLFW_KEY_Q))
-	{
-		isBusy = false;
-	}
+
 
 	if (m_input.IsKeyDown(GLFW_KEY_E) && !isBusy)
 	{
 		boolE = true;
 		isBusy = true;
-		m_cubieRenderer.RotateZ(false, disc);
+		isbusyQE = true;
+		angle = 90.0f;
 	}
-	if (m_input.WasKeyReleased(GLFW_KEY_E))
-	{
-		isBusy = false;
-	}
+
 
 
 
@@ -178,38 +180,87 @@ void CompoundCube::Update(double deltaTime)
 	{
 		boolW = true;
 		isBusy = true;
-		m_cubieRenderer.RotateX(false, disc);
+		isbusyWS = true;
+		angle = 90.0f;
 	}
-	if (m_input.WasKeyReleased(GLFW_KEY_W))
-	{
-		isBusy = false;
-	}
+
 
 	if (m_input.IsKeyDown(GLFW_KEY_S) && !isBusy)
 	{
 		boolS = true;
 		isBusy = true;
-		m_cubieRenderer.RotateX(true, disc);
-	}
-	if (m_input.WasKeyReleased(GLFW_KEY_S))
-	{
-		isBusy = false;
+		isbusyWS = true;
+		angle = -90.0f;	
 	}
 
 
-
-	if (m_input.IsKeyDown(GLFW_KEY_1))
+	if (m_input.IsKeyDown(GLFW_KEY_1) && !isBusy)
 	{
 		disc = 2;
 	}
-	if (m_input.IsKeyDown(GLFW_KEY_2))
+	if (m_input.IsKeyDown(GLFW_KEY_2) && !isBusy)
 	{
 		disc = 1;
 	}
-	if (m_input.IsKeyDown(GLFW_KEY_3))
+	if (m_input.IsKeyDown(GLFW_KEY_3) && !isBusy)
 	{
 		disc = 0;
 	}
+	if (m_turningAngle > 1.5f || m_turningAngle < -1.5f)
+	{
+
+		if (isbusyAD)
+		{
+			if (boolA)
+			{
+				boolA = false;
+				m_cubieRenderer.RotateY(false, disc);
+
+			}
+			else
+			{
+				boolD = false;
+				m_cubieRenderer.RotateY(true, disc);
+			}
+			isbusyAD = false;
+		}
+		if (isbusyQE)
+		{
+			if (boolQ)
+			{
+				boolQ = false;
+				m_cubieRenderer.RotateZ(true, disc);
+			}
+			else
+			{
+				boolE = false;
+				m_cubieRenderer.RotateZ(false, disc);
+			}
+			isbusyQE = false;
+		}
+		if (isbusyWS)
+		{
+			if (boolW)
+			{
+				boolW = false;
+				m_cubieRenderer.RotateX(false, disc);
+			}
+			else
+			{
+				boolS = false;
+				m_cubieRenderer.RotateX(true, disc);
+			}
+			isbusyWS = false;
+		}
+
+		isBusy = false;
+		
+		angle = 0.0f;
+		m_turningAngle = 0.0f;
+		
+	}
+
+	m_turningAngle += glm::radians(angle) * (float)deltaTime;
 
 
 	glm::quat velocityQuaternion = glm::quat(0.0f, glm::vec3(xVel, yVel, 0.0f));

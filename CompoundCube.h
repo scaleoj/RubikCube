@@ -26,8 +26,12 @@ private:
 	bool boolW;
 	bool boolS;
 	bool isBusy;
+	bool isbusyWS;
+	bool isbusyQE;
+	bool isbusyAD;
 	int disc;
-
+	float angle = 0.0f;
+	float m_turningAngle = 0.0f;
 	
 };
 
