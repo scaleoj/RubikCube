@@ -43,9 +43,6 @@ void CompoundCube::Render(float aspectRatio)
 	int i2;
 	int j2;
 
-
-
-
 	float offset = m_cubieRenderer.GetCubieExtension() + 0.1f;
 	for (int i = 0; i < 3; ++i)
 	{
@@ -85,7 +82,10 @@ void CompoundCube::Render(float aspectRatio)
 
 				if ((isbusyWS) && i2 == disc)
 				{
+					compound = glm::translate(compound, glm::vec3(-((i - 1) * offset), -((j - 1) * offset), -((k - 1)*offset)));
 					compound = glm::rotate(compound, m_turningAngle, glm::vec3(1.0f, 0.0f, 0.0f));
+					compound = glm::translate(compound, glm::vec3( cos(m_turningAngle)*i - sin(m_turningAngle)*i, j, sin(m_turningAngle)*k + cos(m_turningAngle)*k));
+					compound = glm::translate(compound, glm::vec3((i - 1) * offset, (j - 1) * offset, (k - 1)*offset));
 				}
 				if ((isbusyAD) && j2 == disc)
 				{
