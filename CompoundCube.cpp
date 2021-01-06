@@ -84,14 +84,12 @@ void CompoundCube::Render(float aspectRatio)
 				{
 					compound = glm::translate(compound, -glm::vec3((i - 1) * offset, (j - 1) * offset, (k - 1)*offset));
 					compound = glm::rotate(compound, m_turningAngle, glm::vec3(1.0f, 0.0f, 0.0f));
-					compound = glm::translate(compound, glm::vec3( cos(m_turningAngle)*i - sin(m_turningAngle)*i, 0, 0));
 					compound = glm::translate(compound, glm::vec3((i - 1) * offset, (j - 1) * offset, (k - 1)*offset));
 				}
 				if ((isbusyAD) && j2 == disc)
 				{
 					compound = glm::translate(compound, -glm::vec3((i - 1) * offset, (j - 1) * offset, (k - 1)*offset));
 					compound = glm::rotate(compound, m_turningAngle, glm::vec3(0.0f, 1.0f, 0.0f));
-					compound = glm::translate(compound, glm::vec3(0, cos(m_turningAngle)*j - sin(m_turningAngle)*j, 0));
 					compound = glm::translate(compound, glm::vec3((i - 1) * offset, (j - 1) * offset, (k - 1)*offset));
 				}
 				if ((isbusyQE) && k == disc)
@@ -99,7 +97,6 @@ void CompoundCube::Render(float aspectRatio)
 
 					compound = glm::translate(compound, -glm::vec3((i - 1) * offset, (j - 1) * offset, (k - 1)*offset));
 					compound = glm::rotate(compound, m_turningAngle, glm::vec3(0.0f, 0.0f, 1.0f));
-					compound = glm::translate(compound, glm::vec3(0, 0, cos(m_turningAngle)*k - sin(m_turningAngle)*k));
 					compound = glm::translate(compound, glm::vec3((i - 1) * offset, (j - 1) * offset, (k - 1)*offset));
 				}
 				m_cubieRenderer.ChangeSideColor(i2, j2, k);
