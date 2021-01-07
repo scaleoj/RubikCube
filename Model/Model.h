@@ -9,7 +9,7 @@ public:
 	void RotateY(bool direction, int disc);
 	void RotateZ(bool direction, int disc);
 	MiniCube GetCube(int x, int y, int z);
-	void PrintModel();
+	//void PrintModel();
 private:
 	MiniCube m_model[3][3][3];
 };

@@ -1,5 +1,4 @@
 #include "Model.h"
-#include <iostream>
 
 void Model::Initialize()
 {
@@ -21,7 +20,7 @@ void Model::RotateX(bool direction, int disc)
 	
 	if (disc > 2)
 	{
-		std::cout << "Error: Wrong Disc Dimension on X-Rotation" << std::endl;
+		//std::cout << "Error: Wrong Disc Dimension on X-Rotation" << std::endl;
 		return;
 	}
 
@@ -74,7 +73,7 @@ void Model::RotateY(bool direction, int disc)
 {
 	if (disc > 2)
 	{
-		std::cout << "Error: Wrong Disc Dimension on Y-Rotation" << std::endl;
+		//std::cout << "Error: Wrong Disc Dimension on Y-Rotation" << std::endl;
 		return;
 	}
 
@@ -125,7 +124,7 @@ void Model::RotateZ(bool direction, int disc)
 {
 	if (disc > 2)
 	{
-		std::cout << "Error: Wrong Disc Dimension on Z-Rotation" << std::endl;
+		//std::cout << "Error: Wrong Disc Dimension on Z-Rotation" << std::endl;
 		return;
 	}
 
@@ -173,6 +172,8 @@ void Model::RotateZ(bool direction, int disc)
 	return m_model[x][y][z];
 }
 
+ /*
+
 void Model::PrintModel()
 {
 	std::cout << "[--][--][--][" + m_model[0][0][2].GetFacingString(0) + "][" + m_model[1][0][2].GetFacingString(0) + "][" + m_model[2][0][2].GetFacingString(0) + "][--][--][--]" << std::endl;
@@ -196,4 +197,5 @@ void Model::PrintModel()
 	std::cout << "------------------------------------" << std::endl;
 	std::cout << std::endl;
 }
+ */
 

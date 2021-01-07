@@ -1,7 +1,6 @@
 #include "CubieRenderer.h"
 #include "ShaderUtil.h"
 #include <glm/gtc/type_ptr.hpp>
-#include <iostream>
 
 
 void CubieRenderer::Initialize()
@@ -143,18 +142,18 @@ void CubieRenderer::ChangeSideColor(int i, int j, int k)
 void CubieRenderer::RotateX(bool dir, int disc)
 {
 	model.RotateX(dir, disc);
-	model.PrintModel();
+	//model.PrintModel();
 }
 
 void CubieRenderer::RotateY(bool dir, int disc)
 {
 	model.RotateY(dir, disc);
-	model.PrintModel();
+	//model.PrintModel();
 }
 
 void CubieRenderer::RotateZ(bool dir, int disc)
 {
 	model.RotateZ(dir, disc);
-	model.PrintModel();
+	//model.PrintModel();
 }
 

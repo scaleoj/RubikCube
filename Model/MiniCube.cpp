@@ -1,5 +1,4 @@
 #include "MiniCube.h"
-#include <iostream>
 
 MiniCube::MiniCube()
 {
